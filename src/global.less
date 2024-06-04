@@ -1,0 +1,104 @@
+@import "reset";
+
+@font-face {
+  font-family: 'Inter';
+  src: url('Assets/Fonts/Inter/static/Inter-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('Assets/Fonts/Inter/static/Inter-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('Assets/Fonts/Inter/static/Inter-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('Assets/Fonts/Inter/static/Inter-ExtraLight.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('Assets/Fonts/Inter/static/Inter-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('Assets/Fonts/Inter/static/Inter-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('Assets/Fonts/Inter/static/Inter-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('Assets/Fonts/Inter/static/Inter-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('Assets/Fonts/Inter/static/Inter-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'icons';
+  src: url('Assets/Fonts/Icons/icons.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:global {
+  body, html {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(0deg, #E0EDFB 0%, #F4F9FF 100%);
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  [data-icon]:before, [data-icon]:before {
+    font-family: 'icons';
+    font-style: normal;
+    font-weight: normal;
+    speak: never;
+
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: .2em;
+    text-align: center;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1em;
+    margin-left: .2em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  [data-icon="show"]:before { content: '\e801'; }
+  [data-icon="hide"]:before { content: '\e802'; }
+}

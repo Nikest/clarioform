@@ -1,0 +1,72 @@
+.container {
+  width: 100%;
+  height: 48px;
+  padding: 10px;
+  border: 1px;
+  display: grid;
+  gap: 0;
+  position: relative;
+  grid-template-columns: 1fr auto;
+  font-size: @textSize;
+
+  [data-icon] {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5px 0 10px;
+    margin-right: -5px;
+    cursor: pointer;
+  }
+}
+
+.input {
+  border: none;
+  outline: none;
+  font-family: inherit;
+  font-size: inherit;
+  background: transparent;
+  position: relative;
+  z-index: 1;
+
+  &:focus::placeholder {
+    color: @color_label_border_focus;
+  }
+
+  &::placeholder {
+    color: @color_label_border_blur;
+  }
+
+  &[data-validation-state="invalid"], &[data-validation-state="invalid"] ~ [data-icon] {
+    color: @color_error;
+  }
+
+  &[data-validation-state="valid"], &[data-validation-state="valid"] ~ [data-icon] {
+      color: @color_success;
+  }
+}
+
+.decor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 1px solid @color_label_border_default;
+  background: @color_white;
+  border-radius: 10px;
+  transition: @transition;
+
+  .input:focus + & {
+    border-color: @color_label_border_focus;
+  }
+
+  .input[data-validation-state="invalid"] ~ & {
+    border-color: @color_error;
+  }
+
+  .input[data-validation-state="valid"] ~ & {
+      border-color: @color_success;
+  }
+}

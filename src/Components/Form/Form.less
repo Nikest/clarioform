@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 100%;
+}
+
+.info {
+  font-size: 13px;
+  color: @color_success;
+  font-weight: 600;
+  line-height: 25px;
+  padding-left: 10px;
+}
+
+.message {
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 18px;
+  padding-top: 5px;
+
+  &.invalid {
+      color: @color_error;
+  }
+
+  &.valid {
+      color: @color_success;
+  }
+
+  &.default {
+      color: @color_main;
+  }
+}
